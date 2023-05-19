@@ -1,0 +1,1 @@
+# dig javapoint.com // convert hostname to ipaddress or vice versa

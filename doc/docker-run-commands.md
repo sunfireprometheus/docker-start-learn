@@ -9,7 +9,7 @@
 
 # ▲ Container
 ##  - build container
-        docker run -dp <host-port>:<docker-internal-port> <image-name>:<tag-name> // run background
+        docker run --name <container-name> -dp <host-port>:<docker-internal-port> <image-name>:<tag-name> // run background
         docker run -p <host-port>:<docker-internal-port> <image-name>:<tag-name>  // run forground
         *EX: 
         docker run -dp 8000:3000 <image-name>:<tag-name>
@@ -47,3 +47,15 @@
         docker network ls
 ##  - detailed view a network
         docker network inspect <network-name>
+
+# ▲ Compose
+##  - run compose yaml file
+        docker compose -p <compose-group-name> up -d
+##  remove all containers related compose
+        docker compose down [--volumes] [--rmi all|local|image_or_tag||]
+##  - output logs of compose
+        docker compose logs -f 
+
+# ▲ Image layering
+## - show all image layers
+        docker image history --no-trunc getting-started

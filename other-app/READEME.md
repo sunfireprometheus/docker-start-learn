@@ -18,3 +18,7 @@
    -e MYSQL_DB=todos `
    node:18-alpine `
    sh -c "yarn install && yarn run dev"
+
+- docker run -dp 8002:3000 --network todo-app -e MYSQL_HOST=mysqli -e MYSQL_USER=root -e MYSQL_PASSWORD=secret -e MYSQL_DB=todos gett
+ing-started:1.0.0
+
